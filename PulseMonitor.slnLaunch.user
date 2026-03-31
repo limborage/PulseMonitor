@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "PulseMonitor.Ingestor.Api\\PulseMonitor.Ingestor.Api.csproj",
+        "Action": "Start",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "PulseMonitor.Worker\\PulseMonitor.Worker.csproj",
+        "Action": "Start",
+        "DebugTarget": "PulseMonitor.Worker"
+      }
+    ]
+  }
+]

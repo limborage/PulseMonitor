@@ -1,0 +1,6 @@
+@PulseMonitor.Ingestor.Api_HostAddress = http://localhost:5216
+
+GET {{PulseMonitor.Ingestor.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

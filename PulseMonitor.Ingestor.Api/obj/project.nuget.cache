@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "njjCuymz/Yo=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\13laa\\Documents\\Systems\\PulseMonitor\\PulseMonitor.Ingestor.Api\\PulseMonitor.Ingestor.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\13laa\\.nuget\\packages\\confluent.kafka\\2.13.2\\confluent.kafka.2.13.2.nupkg.sha512",
+    "C:\\Users\\13laa\\.nuget\\packages\\librdkafka.redist\\2.13.2\\librdkafka.redist.2.13.2.nupkg.sha512",
+    "C:\\Users\\13laa\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
+    "C:\\Users\\13laa\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

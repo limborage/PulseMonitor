@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PulseMonitor.Ingestor.Api/PulseMonitor.Ingestor.Api.csproj" />
+  <Project Path="PulseMonitor.Worker/PulseMonitor.Worker.csproj" />
+</Solution>
