@@ -1,7 +1,19 @@
 using Confluent.Kafka;
+using PulseMonitor.Ingestor.Api.Hubs;
 using PulseMonitor.Ingestor.Api.Models;
+using PulseMonitor.Ingestor.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSignalR();
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowAngular", policy => {
+        policy.WithOrigins(builder.Configuration["Cors:AngularUrl"])
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+    });
+});
 
 var producerConfig = new ProducerConfig
 {
@@ -14,7 +26,12 @@ builder.Services.AddSingleton<IProducer<string, string>>(sp => new ProducerBuild
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.AddHostedService<MetricBroadcaster>();
+
 var app = builder.Build();
+
+app.UseCors("AllowAngular");
+app.MapHub<MetricHub>("/metricHub");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

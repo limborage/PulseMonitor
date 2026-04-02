@@ -51,10 +51,11 @@ C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debu
 C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\PulseMon.09243A3E.Up2Date
 C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\PulseMonitor.Ingestor.Api.dll
 C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\refint\PulseMonitor.Ingestor.Api.dll
 C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\PulseMonitor.Ingestor.Api.pdb
 C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\PulseMonitor.Ingestor.Api.genruntimeconfig.cache
 C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\ref\PulseMonitor.Ingestor.Api.dll
+C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\PulseMonitor.Ingestor.Api.sourcelink.json
+C:\Users\13laa\Documents\Systems\PulseMonitor\PulseMonitor.Ingestor.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

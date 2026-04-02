@@ -1,0 +1,23 @@
+.nav-link {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    margin: 2px 0;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white !important;
+    }
+
+    &:active {
+        box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+    }
+}
+
+.card {
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}

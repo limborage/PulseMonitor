@@ -28,6 +28,7 @@ services:
       - --kafka-addr internal://0.0.0.0:9092,external://0.0.0.0:19092
       - --advertise-kafka-addr internal://redpanda:9092,external://localhost:19092
       - --mode dev-container
+      - --set auto_create_topics_enabled=true
     ports:
       - 19092:19092
     volumes:
