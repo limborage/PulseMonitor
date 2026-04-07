@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PulseMonitor.Worker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65bb81089d48715fc5984929bbaccbddfbf7a1d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b51b658d699e4c9e04daf10ec0fa5f90447d89fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("PulseMonitor.Worker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PulseMonitor.Worker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

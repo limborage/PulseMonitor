@@ -1,13 +1,29 @@
 {
   "version": 2,
-  "dgSpecHash": "5BOuzp7jy+w=",
-  "success": true,
+  "dgSpecHash": "aVuYVnFoHLM=",
+  "success": false,
   "projectFilePath": "C:\\Users\\13laa\\Documents\\Systems\\PulseMonitor\\PulseMonitor.Ingestor.Api\\PulseMonitor.Ingestor.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\13laa\\.nuget\\packages\\confluent.kafka\\2.13.2\\confluent.kafka.2.13.2.nupkg.sha512",
     "C:\\Users\\13laa\\.nuget\\packages\\librdkafka.redist\\2.13.2\\librdkafka.redist.2.13.2.nupkg.sha512",
     "C:\\Users\\13laa\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
-    "C:\\Users\\13laa\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+    "C:\\Users\\13laa\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\10.0.1\\npgsql.entityframeworkcore.postgresql.10.0.1.nupkg.sha512",
+    "C:\\Users\\13laa\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.14\\microsoft.netcore.app.ref.9.0.14.nupkg.sha512",
+    "C:\\Users\\13laa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.14\\microsoft.windowsdesktop.app.ref.9.0.14.nupkg.sha512",
+    "C:\\Users\\13laa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.14\\microsoft.aspnetcore.app.ref.9.0.14.nupkg.sha512",
+    "C:\\Users\\13laa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.14\\microsoft.netcore.app.host.win-x64.9.0.14.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Npgsql.EntityFrameworkCore.PostgreSQL 10.0.1 is not compatible with net9.0 (.NETCoreApp,Version=v9.0). Package Npgsql.EntityFrameworkCore.PostgreSQL 10.0.1 supports: net10.0 (.NETCoreApp,Version=v10.0)",
+      "projectPath": "C:\\Users\\13laa\\Documents\\Systems\\PulseMonitor\\PulseMonitor.Ingestor.Api\\PulseMonitor.Ingestor.Api.csproj",
+      "filePath": "C:\\Users\\13laa\\Documents\\Systems\\PulseMonitor\\PulseMonitor.Ingestor.Api\\PulseMonitor.Ingestor.Api.csproj",
+      "libraryId": "Npgsql.EntityFrameworkCore.PostgreSQL",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

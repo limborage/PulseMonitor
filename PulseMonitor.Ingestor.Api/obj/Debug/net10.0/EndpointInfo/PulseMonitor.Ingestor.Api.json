@@ -10,10 +10,10 @@
     }
   ],
   "paths": {
-    "/ingest": {
+    "/Metrics": {
       "post": {
         "tags": [
-          "PulseMonitor.Ingestor.Api"
+          "Metrics"
         ],
         "requestBody": {
           "content": {
@@ -21,10 +21,47 @@
               "schema": {
                 "$ref": "#/components/schemas/HeartbeatMetric"
               }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartbeatMetric"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/HeartbeatMetric"
+              }
             }
           },
           "required": true
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/Metrics/latest": {
+      "get": {
+        "tags": [
+          "Metrics"
+        ],
+        "parameters": [
+          {
+            "name": "count",
+            "in": "query",
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32",
+              "default": 10
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -77,7 +114,7 @@
   },
   "tags": [
     {
-      "name": "PulseMonitor.Ingestor.Api"
+      "name": "Metrics"
     }
   ]
 }

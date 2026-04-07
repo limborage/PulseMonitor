@@ -1,6 +1,8 @@
 using Confluent.Kafka;
+using Microsoft.EntityFrameworkCore;
+using PulseMonitor.Ingestor.Api.Data;
 using PulseMonitor.Ingestor.Api.Hubs;
-using PulseMonitor.Ingestor.Api.Models;
+using PulseMonitor.Ingestor.Api.Repositories;
 using PulseMonitor.Ingestor.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,7 +28,14 @@ builder.Services.AddSingleton<IProducer<string, string>>(sp => new ProducerBuild
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IMetricRepository, MetricRepository>();
+builder.Services.AddScoped<IMetricService, MetricService>();
 builder.Services.AddHostedService<MetricBroadcaster>();
+
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -41,22 +50,6 @@ if (app.Environment.IsDevelopment())
 
 // app.UseHttpsRedirection();
 
-app.MapPost("/ingest", async (HeartbeatMetric metric, IProducer<string, string> producer) =>
-   {
-       var message = new Message<string, string>
-       {
-           Key = metric.DeviceId,
-           Value = System.Text.Json.JsonSerializer.Serialize(metric)
-       };
-
-       var deliveryReport = await producer.ProduceAsync("health-metrics", message);
-
-       return Results.Accepted(value: new
-       {
-           Status = "Sent",
-           Partition = deliveryReport.Partition.Value
-       });
-   }
-);
+app.MapControllers();
 
 app.Run();

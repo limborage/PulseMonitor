@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { SignalrService } from './services/signalr';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { Metric } from './models/metric';
+import { DEFAULT_METRIC, Metric } from './models/metric';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class App implements OnInit {
   protected readonly title = signal('PulseMonitor-UI');
   private signalRService = inject(SignalrService);
   private latestMetricRaw = toSignal(this.signalRService.metricReceived$);
-  latestMetric = computed<Metric>(() => this.latestMetricRaw() ?? { deviceId: 'N/A', cpuUsage: 0, memoryUsage: 0, timestamp: 0 });
+  latestMetric = computed<Metric>(() => this.latestMetricRaw() ?? DEFAULT_METRIC);
   recentMetrics = toSignal(this.signalRService.recentMetrics, { initialValue: [] as Metric[] });
   
   ngOnInit(): void {
