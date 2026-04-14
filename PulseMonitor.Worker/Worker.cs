@@ -23,7 +23,12 @@ public class Worker : BackgroundService
             BootstrapServers = config["Kafka:BootstrapServers"],
             GroupId = config["Kafka:GroupId"],
             AutoOffsetReset = AutoOffsetReset.Earliest,
-            EnableAutoCommit = false
+            EnableAutoCommit = false,
+            SecurityProtocol = SecurityProtocol.SaslSsl,
+            SaslMechanism = SaslMechanism.Plain,
+            SaslUsername = config["Kafka:SaslUsername"],
+            SaslPassword = config["Kafka:SaslPassword"],
+            ApiVersionRequestTimeoutMs = 15000,
         };
 
         _consumer = new ConsumerBuilder<string, string>(consumerConfig).Build();

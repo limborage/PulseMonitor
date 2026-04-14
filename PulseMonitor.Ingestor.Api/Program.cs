@@ -19,7 +19,11 @@ builder.Services.AddCors(options => {
 
 var producerConfig = new ProducerConfig
 {
-    BootstrapServers = builder.Configuration["Kafka:BootstrapServers"]
+    BootstrapServers = builder.Configuration["Kafka:BootstrapServers"],
+    SecurityProtocol = SecurityProtocol.SaslSsl,
+    SaslMechanism = SaslMechanism.Plain,
+    SaslUsername = builder.Configuration["Kafka:SaslUsername"],
+    SaslPassword = builder.Configuration["Kafka:SaslPassword"]
 };
 
 builder.Services.AddSingleton<IProducer<string, string>>(sp => new ProducerBuilder<string, string>(producerConfig).Build());
@@ -49,6 +53,12 @@ if (app.Environment.IsDevelopment())
 }
 
 // app.UseHttpsRedirection();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();
+}
 
 app.MapControllers();
 

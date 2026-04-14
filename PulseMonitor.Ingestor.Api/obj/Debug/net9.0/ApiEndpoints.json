@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "PulseMonitor.Ingestor.Api.Controllers.MetricsController",
+    "Method": "Post",
+    "RelativePath": "Metrics",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "metric",
+        "Type": "PulseMonitor.Ingestor.Api.Models.HeartbeatMetric",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PulseMonitor.Ingestor.Api.Controllers.MetricsController",
+    "Method": "GetLatest",
+    "RelativePath": "Metrics/latest",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "count",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

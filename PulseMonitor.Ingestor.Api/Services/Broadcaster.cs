@@ -21,7 +21,12 @@ public class MetricBroadcaster : BackgroundService
         { 
             BootstrapServers = config["Kafka:BootstrapServers"],
             GroupId = config["Kafka:GroupId"],
-            AutoOffsetReset = AutoOffsetReset.Latest
+            AutoOffsetReset = AutoOffsetReset.Latest,
+            SecurityProtocol = SecurityProtocol.SaslSsl,
+            SaslMechanism = SaslMechanism.Plain,
+            SaslUsername = config["Kafka:SaslUsername"],
+            SaslPassword = config["Kafka:SaslPassword"],
+            ApiVersionRequestTimeoutMs = 15000,
         };
 
         _consumer = new ConsumerBuilder<string, string>(consumerConfig).Build();
