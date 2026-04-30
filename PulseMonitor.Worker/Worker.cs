@@ -65,8 +65,18 @@ public class Worker : BackgroundService
 
                         }
 
-                        var cache = _redis.GetDatabase();
-                        await cache.StringSetAsync($"latest:{metric.DeviceId}", result.Message.Value);
+                        try
+                        {
+                            if (_redis.IsConnected)
+                            {
+                                var cache = _redis.GetDatabase();
+                                await cache.StringSetAsync($"latest:{metric.DeviceId}", result.Message.Value);
+                            }
+                        }
+                        catch (Exception redisEx)
+                        {
+                            _logger.LogWarning($"Redis update failed for {metric.DeviceId}, skipping cache: {redisEx.Message}");
+                        }
 
                         _consumer.Commit(result);
 

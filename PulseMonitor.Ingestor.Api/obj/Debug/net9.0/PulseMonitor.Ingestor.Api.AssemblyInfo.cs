@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PulseMonitor.Ingestor.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+55b853c6fa7eb1efdd47073a884a0794a7f05f6f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77ac800e4fcca0f47610baea8ea7e87b216515bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("PulseMonitor.Ingestor.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PulseMonitor.Ingestor.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
